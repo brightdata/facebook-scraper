@@ -312,13 +312,14 @@ Madison Square Garden 2026-10-19T22:29:17.000Z recommends: False
 from facebook_scraper import marketplace_search
 
 for item in marketplace_search("bicycle", "New York", 3):
-    print(item["final_price"], item["currency"], item["title"][:40], "|", item["location"])
+    if "error" not in item:  # rows the limit cancelled carry only an error
+        print(item["final_price"], item["currency"], item["title"][:40], "|", item["location"])
 ```
 
 ```
-70 USD Bicycle in 80% new condition | Flushing, NY
-75 USD Huffy Rock Creek 26" Mountain Bike | Belleville, NJ
-30 USD Bike (2) | Bloomfield, NJ
+100 USD Bikes for sale like new | Perth Amboy, NJ
+100 USD bicycle | Linden, NJ
+350 USD 700c Whls 24 Spd Medium Frame Cannondale | Brooklyn, NY
 ```
 
 `marketplace_category(url, 5)` does the same from a category URL, such as
