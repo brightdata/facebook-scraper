@@ -1,7 +1,7 @@
 # Facebook scraper for Python
 
 Scrape Facebook posts, comments, reels, Marketplace, events and Meta Ad Library to JSON with Python. No Facebook login, no Graph API.
-Built on the [Bright Data Facebook Scraper API](https://brightdata.com/products/web-scraper/facebook?utm_source=github). New accounts get 5,000 free credits a month.
+Built on the [Bright Data Facebook Scraper API](https://brightdata.com/products/web-scraper/facebook?utm_source=github&utm_medium=referral&utm_content=facebook-scraper). New accounts get 5,000 free credits a month.
 
 [![Live check](https://github.com/brightdata/facebook-scraper/actions/workflows/live.yml/badge.svg)](https://github.com/brightdata/facebook-scraper/actions/workflows/live.yml)
 [![last verified](https://img.shields.io/badge/last%20verified-9%20Nov%202026-brightgreen)](https://github.com/brightdata/facebook-scraper/actions/workflows/live.yml) <!-- verified: rewritten by the daily run -->
@@ -12,7 +12,7 @@ Facebook data as JSON, in Python: page and group posts, comments, reels, page
 details, profiles, reviews, Marketplace listings, events and the Meta Ad
 Library. All eleven Bright Data Facebook scrapers, one function each. No
 Facebook login, no browser, no dependencies. Built on the
-[Bright Data Facebook Scraper API](https://brightdata.com/products/web-scraper/facebook?utm_source=github).
+[Bright Data Facebook Scraper API](https://brightdata.com/products/web-scraper/facebook?utm_source=github&utm_medium=referral&utm_content=facebook-scraper).
 
 Also here: a one-command CLI for page posts, and the
 [Bright Data CLI](#facebook-mcp-server-and-claude-code-skill), which needs no Python at all.
