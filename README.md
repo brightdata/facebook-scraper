@@ -504,7 +504,7 @@ sample file's first post has 44 keys.
 
 | field | type | description |
 | --- | --- | --- |
-| `url` | url |  |
+| `url` | url | URL |
 | `post_id` | text | Unique identifier for each Facebook post |
 | `user_url` | url | Unique identifier for each Facebook post |
 | `user_username_raw` | text | Username of the user who posted the content |
@@ -525,7 +525,7 @@ sample file's first post has 44 keys.
 | `group_created_at` | date | The date When the group was created |
 | `user_is_verified` | boolean | Verification status of the Facebook user who posted |
 | `original_post` | object | Indicates if the post is original or a repost |
-| `attachments` | array |  |
+| `attachments` | array | Attachments |
 | `other_posts_url` | array | Web address of other posts by the same user |
 | `post_external_link` | url | External link included in the post |
 | `post_external_title` | text | Title of the external link |
@@ -544,8 +544,8 @@ sample file's first post has 44 keys.
 | `following` | number | Number of profiles following |
 | `price` | number | Price associated with the post |
 | `location` | text | Location associated with the post |
-| `profile_id` | text |  |
-| `publisher_image_url` | url |  |
+| `profile_id` | text | Profile ID |
+| `publisher_image_url` | url | Publisher image URL |
 | `num_reaction_type` | array | Type of likes received (e.g., reactions, thumbs-up) |
 | `delegate_page_id` | text | delegate_page_id |
 
