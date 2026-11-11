@@ -4,7 +4,7 @@ Scrape Facebook posts, comments, reels, Marketplace, events and Meta Ad Library 
 Built on the [Bright Data Facebook Scraper API](https://brightdata.com/products/web-scraper/facebook?utm_source=github&utm_medium=referral&utm_content=facebook-scraper). New accounts get 5,000 free credits a month.
 
 [![Live check](https://github.com/brightdata/facebook-scraper/actions/workflows/live.yml/badge.svg)](https://github.com/brightdata/facebook-scraper/actions/workflows/live.yml)
-[![last verified](https://img.shields.io/badge/last%20verified-10%20Nov%202026-brightgreen)](https://github.com/brightdata/facebook-scraper/actions/workflows/live.yml) <!-- verified: rewritten by the daily run -->
+[![last verified](https://img.shields.io/badge/last%20verified-11%20Nov%202026-brightgreen)](https://github.com/brightdata/facebook-scraper/actions/workflows/live.yml) <!-- verified: rewritten by the daily run -->
 
 [Quickstart](#how-to-scrape-facebook-posts-with-python) · [No login](#scrape-facebook-without-a-login-or-the-graph-api) · [CLI](#bulk-facebook-page-posts-cli) · [Endpoints](#scrape-facebook-posts-comments-marketplace-events-and-ads) · [Data](#facebook-post-data-fields-json) · [Errors](#facebook-scraper-errors) · [MCP and Claude Code](#facebook-mcp-server-and-claude-code-skill) · [Free credits](#is-this-facebook-scraper-free) · [Docs](https://docs.brightdata.com/products/scrapers/facebook/introduction) · [Support](#support)
 
