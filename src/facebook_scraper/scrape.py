@@ -23,6 +23,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import SplitResult, urlsplit
 
 API = "https://api.brightdata.com/datasets/v3"
 
@@ -286,12 +287,29 @@ def split(rows: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[str]]:
     return records, errors
 
 
+def _url_on(value: str, domain: str) -> SplitResult | None:
+    """value parsed as a URL, when its host is domain or a subdomain of it.
+
+    A substring test would let https://evil.com/facebook.com/x through; the host is
+    what decides which site a URL names.
+    """
+    try:
+        url = urlsplit(value if "://" in value else f"https://{value}")
+        host = (url.hostname or "").lower()
+    except ValueError:
+        return None
+    return url if host == domain or host.endswith(f".{domain}") else None
+
+
 def page_url(page: str) -> str:
     """Accept Meta, @Meta, facebook.com/Meta or a full URL. Reject anything else."""
     cleaned = (page or "").strip()
-    if "facebook.com/" in cleaned:
-        tail = cleaned.split("facebook.com/", 1)[1].strip("/")
-        if not tail:
+    if "/" in cleaned.strip("/"):
+        url = _url_on(cleaned, "facebook.com")
+        if url is None:
+            raise ValueError(f"{page!r} is not a Facebook page")
+        tail = url.path.strip("/") + (f"?{url.query}" if url.query else "")
+        if not url.path.strip("/"):
             raise ValueError(f"{page!r} is not a Facebook page")
         return f"https://www.facebook.com/{tail}"
     cleaned = cleaned.lstrip("@").strip("/")

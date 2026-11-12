@@ -330,3 +330,14 @@ def test_every_in_page_link_has_its_heading():
     anchors = {re.sub(r"[^a-z0-9 -]", "", h.lower()).replace(" ", "-") for h in headings}
     for anchor in re.findall(r"\]\(#([^)]+)\)", readme):
         assert anchor in anchors, f"#{anchor} points at no heading"
+
+
+def test_a_url_on_another_host_is_not_a_page():
+    assert fb.page_url("https://m.facebook.com/Meta") == "https://www.facebook.com/Meta"
+    for url in (
+        "https://evil.com/facebook.com/Meta",
+        "https://facebook.com.evil.com/Meta",
+        "https://notfacebook.com/Meta",
+    ):
+        with pytest.raises(ValueError):
+            fb.page_url(url)
