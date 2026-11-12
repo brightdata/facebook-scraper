@@ -60,16 +60,16 @@ is written here.
 
 - `pytest` runs offline and needs no token. `ruff check .` must pass.
 - CI follows the README's own commands on an empty machine. A weekly workflow
-  executes every fenced block in the README against the real API, and a daily
-  one runs a smaller live check. A snippet must be complete and paste-able on
+  executes every fenced block in the README against the real API, and the same
+  run also does a smaller live check. A snippet must be complete and paste-able on
   its own, and its shown output must be real.
 - Group posts, comments and reviews name private people. README snippets print
   counts, dates and page names, not who wrote what.
 - The field tables in the README sit between `<!-- fields:start -->` and
-  `<!-- fields:end -->` and are regenerated daily by
+  `<!-- fields:end -->` and are regenerated weekly by
   `.github/scripts/field_tables.py` from `scrapers-full.json`. Do not edit them
   by hand.
 - The "last verified" badge line at the top of the README is rewritten by the
-  daily run. Do not edit it by hand.
+  weekly run. Do not edit it by hand.
 - Keep it small. Beyond the status poll, do not add retries, deduplication,
   scheduling, databases, async examples or concurrency.

@@ -3,12 +3,23 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "facebook-scraper"
-version = "0.1.0"
+name = "brightdata-facebook-scraper"
+dynamic = ["version"]
 description = "Facebook scraper in Python: page and group posts, comments, reels, pages, profiles, reviews, Marketplace, events and Meta Ad Library as JSON, on the Bright Data Facebook Scraper API. No Facebook login, no Graph API, no dependencies. 5,000 free credits a month."
 readme = "README.md"
 license = { text = "Apache-2.0" }
 requires-python = ">=3.10"
+authors = [{ name = "Bright Data" }]
+keywords = ["facebook", "facebook-scraper", "scraper", "web-scraping", "bright-data", "facebook-api", "posts", "pages", "groups"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Internet :: WWW/HTTP",
+]
 dependencies = []
 
 [project.optional-dependencies]
@@ -19,6 +30,13 @@ facebook-scraper = "facebook_scraper.__main__:main"
 
 [project.urls]
 Homepage = "https://github.com/brightdata/facebook-scraper"
+Documentation = "https://docs.brightdata.com/products/scrapers/facebook/introduction"
+Source = "https://github.com/brightdata/facebook-scraper"
+Issues = "https://github.com/brightdata/facebook-scraper/issues"
+Changelog = "https://github.com/brightdata/facebook-scraper/blob/main/CHANGELOG.md"
+
+[tool.hatch.version]
+path = "src/facebook_scraper/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/facebook_scraper"]
